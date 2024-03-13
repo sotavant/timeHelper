@@ -61,6 +61,8 @@ func showTimes(times []int, needTimeInt int) {
 
 	for _, v := range floatTimes {
 		calc := (v / float32(commonTime)) * float32(remainTime)
-		fmt.Printf("%dm + %dm\n", int(math.Round(float64(v))), int(math.Round(float64(calc))))
+		vRound := math.Round(float64(v))
+		calcRound := math.Round(float64(calc))
+		fmt.Printf("%dm + %dm = %dm\n", int(vRound), int(calcRound), int(vRound+calcRound))
 	}
 }
